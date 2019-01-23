@@ -1,0 +1,469 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/paris/ontologies/2019/0/ontologyPractica2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/paris/ontologies/2019/0/ontologyPractica2">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Año"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Baja"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fecha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lugar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MotivoBaja"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NivelEstudio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pais"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParteFecha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Persona"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Provincia"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#alta"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#altaPad"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fecha"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fechaCreacion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fechaEscision"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#motivo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#nacionalidad"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#nivelEstudios"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#paisDestino"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#paisNacimiento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#paisProcedencia"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#personaVinculada"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#propiedadBaja"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#propiedadPais"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#propiedadPersona"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#provinciaNacimiento"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#provinciadestino"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#codigoMB"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#codigoNE"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#codigoPostal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#descripcionMB"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#edad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#estudiosDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#identifier"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#modified"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#motivoDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nivelNE"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombreP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombrePr"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#paisDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#parteFechaDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#personaDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#provinciaDataProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sexo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#titulacion"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Año"/>
+        <Class IRI="#ParteFecha"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dia"/>
+        <Class IRI="#ParteFecha"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mes"/>
+        <Class IRI="#ParteFecha"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pais"/>
+        <Class IRI="#Lugar"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provincia"/>
+        <Class IRI="#Lugar"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Provincia"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#partOf"/>
+            <Class IRI="#Pais"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#alta"/>
+        <ObjectProperty IRI="#fecha"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#alta"/>
+        <ObjectProperty IRI="#propiedadBaja"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#altaPad"/>
+        <ObjectProperty IRI="#fecha"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#altaPad"/>
+        <ObjectProperty IRI="#propiedadBaja"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#fechaCreacion"/>
+        <ObjectProperty IRI="#fecha"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#fechaCreacion"/>
+        <ObjectProperty IRI="#propiedadPais"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#fechaEscision"/>
+        <ObjectProperty IRI="#fecha"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#fechaEscision"/>
+        <ObjectProperty IRI="#propiedadPais"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#motivo"/>
+        <ObjectProperty IRI="#propiedadBaja"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#nacionalidad"/>
+        <ObjectProperty IRI="#propiedadPersona"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#nivelEstudios"/>
+        <ObjectProperty IRI="#propiedadPersona"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#paisDestino"/>
+        <ObjectProperty IRI="#propiedadPersona"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#paisNacimiento"/>
+        <ObjectProperty IRI="#propiedadPersona"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#paisProcedencia"/>
+        <ObjectProperty IRI="#propiedadPersona"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#personaVinculada"/>
+        <ObjectProperty IRI="#propiedadBaja"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#provinciaNacimiento"/>
+        <ObjectProperty IRI="#propiedadPersona"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#provinciadestino"/>
+        <ObjectProperty IRI="#propiedadPersona"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#propiedadBaja"/>
+        <Class IRI="#Baja"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#propiedadPais"/>
+        <Class IRI="#Pais"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#propiedadPersona"/>
+        <Class IRI="#Persona"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fecha"/>
+        <Class IRI="#Fecha"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fecha"/>
+        <Class IRI="#ParteFecha"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#motivo"/>
+        <Class IRI="#MotivoBaja"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#nacionalidad"/>
+        <Class IRI="#Pais"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#nivelEstudios"/>
+        <Class IRI="#NivelEstudio"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#paisDestino"/>
+        <Class IRI="#Pais"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#paisNacimiento"/>
+        <Class IRI="#Pais"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#paisProcedencia"/>
+        <Class IRI="#Pais"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#personaVinculada"/>
+        <Class IRI="#Persona"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#provinciaNacimiento"/>
+        <Class IRI="#Provincia"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#provinciadestino"/>
+        <Class IRI="#Provincia"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#codigoMB"/>
+        <DataProperty IRI="#motivoDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#codigoNE"/>
+        <DataProperty IRI="#estudiosDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#codigoPostal"/>
+        <DataProperty IRI="#personaDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#descripcionMB"/>
+        <DataProperty IRI="#motivoDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#edad"/>
+        <DataProperty IRI="#personaDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#estudiosDataProperty"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#identifier"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#modified"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#motivoDataProperty"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nivelNE"/>
+        <DataProperty IRI="#estudiosDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nombreP"/>
+        <DataProperty IRI="#paisDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nombrePr"/>
+        <DataProperty IRI="#provinciaDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#paisDataProperty"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#parteFechaDataProperty"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#personaDataProperty"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#provinciaDataProperty"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#sexo"/>
+        <DataProperty IRI="#personaDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#titulacion"/>
+        <DataProperty IRI="#personaDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#estudiosDataProperty"/>
+        <Class IRI="#NivelEstudio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#motivoDataProperty"/>
+        <Class IRI="#MotivoBaja"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#paisDataProperty"/>
+        <Class IRI="#Pais"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#parteFechaDataProperty"/>
+        <Class IRI="#ParteFecha"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#personaDataProperty"/>
+        <Class IRI="#Persona"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#provinciaDataProperty"/>
+        <Class IRI="#Provincia"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#codigoMB"/>
+        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#codigoNE"/>
+        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#codigoPostal"/>
+        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#descripcionMB"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#edad"/>
+        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nivelNE"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombreP"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombrePr"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#parteFechaDataProperty"/>
+        <Datatype abbreviatedIRI="xsd:unsignedInt"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sexo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#titulacion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fecha</IRI>
+        <Literal>Debería heredar de Time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Lugar</IRI>
+        <Literal>Debería heredar de Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Persona</IRI>
+        <Literal>Debería heredar de FOAF</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+
